@@ -12,6 +12,26 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <div>
+      <%= f.label :starting_at %>
+      <%= f.datetime_select :starting_at %>
+    </div>
+    <div>
+      <%= f.label :ending_at %>
+      <%= f.datetime_select :ending_at %>
+    </div>
+    <div><%= f.submit %></div>
   </div>
 <% end %>
