@@ -1,24 +1,24 @@
 # interview-project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+- Ruby version 2.3.0
 
-Things you may want to cover:
+## Setup
+- Fork and clone the repo
+- `$ bundle install`
+- `$ rake db:setup`
 
-* Ruby version 2.3.0!
+## Running the server
+- `$ rails server`
 
-* System dependencies
+## Running the tests
+-  `$ rspec`
 
-* Configuration
+## Project requirements
+- Need to be able to import all event data from sample csv
+  - file location: `data/events.csv`
+- Need to be able to view events by host
+- There should be test coverage for these new features.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Submitting the project
+- Create a pull request to the [original repository](https://github.com/PartCycleTech/interview-project)
