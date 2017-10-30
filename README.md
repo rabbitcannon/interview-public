@@ -12,8 +12,9 @@ It is recommended to use [Cloud9](https://c9.io/) to develop this project so tha
   - Hosted workspace
   - Clone from git: (clone url for your fork of this repo)
   - Ruby/Rails template
-4. `$ bundle install`
-5. `$ rake db:setup`
+4. `$ git pull origin master`
+5. `$ bundle install`
+6. `$ rake db:setup`
 
 ## Running the server
 - `$ rails server -b $IP -p $PORT`
