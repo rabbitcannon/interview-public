@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/interview-project
+    docker:
+      - image: circleci/ruby:2.3-node
+    steps:
+      - checkout
+
+      - run:
+          name: Which bundler?
+          command: bundle -v
+
+      - restore_cache:
+          keys:
+            - interview-project-deps-{{ .Environment.DEPENDENCY_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
+            - interview-project-deps-{{ .Environment.DEPENDENCY_CACHE_VERSION }}-
+
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+
+      - save_cache:
+          key: interview-project-deps-{{ .Environment.DEPENDENCY_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      - run:
+          name: Run rspec tests
+          command: bundle exec rspec
+
+      - store_test_results:
+          path: test_results
