@@ -4,24 +4,29 @@
 - Ruby version 2.3.0
 
 ## Setup
-It is recommended to use [Cloud9](https://c9.io/) to develop this project so that you're running in a clean environment and don't have to worry about the overhead of configuring your own machine. Everything has been tested to work without issues in Cloud9, and these instructions assume that's what you'll be using.
+It is recommended to use [Docker Desktop](https://www.docker.com/products/docker-desktop) to develop this project so that you're running in a clean environment and don't have to worry about the overhead of fully configuring your own machine. Everything has been tested to work without issues in Docker, and these instructions assume that's what you'll be using.
 
 1. Fork this repo from your personal github account
-2. Go to [c9.io](https://c9.io/) and create an account.
-3. Create a new workspace with this configuration:
-  - Hosted workspace
-  - Clone from git: (clone url for your fork of this repo)
-  - Ruby/Rails template
+2. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+3. Clone the repo locally on your computer (the following commands are executed in the cloned `interview-project/` directory)
 4. `$ git pull origin master`
-5. `$ bundle install`
-6. `$ rake db:setup`
+5. `$ docker-compose build`
+6. `$ docker-compose run web rake db:setup`
 
 ## Running the server
-- `$ rails server -b $IP -p $PORT`
-- Cloud9 provides a nice preview. If you start rails using the exact command above, the app will be running on your Cloud9 workspace's url. (For example my workspace url was https://partcycle-interview-project-tyleryasaka.c9users.io/.)
+- `$ docker-compose up`
+- You should now be able to preview the app in your browser at 127.0.0.1:3000
 
 ## Running the tests
--  `$ rspec`
+-  `$ docker-compose run web rspec`
+
+## Running other commands
+
+All kinds of standard Rails development commands can be run simply by prefixing them with `docker-compose run web`. Example:
+- `$ docker-compose run web rake routes`
+
+You can also open a bash session inside the docker container like this:
+- `$ docker-compose run web bash`
 
 ## Project requirements
 - Need to be able to import all event data from sample csv
