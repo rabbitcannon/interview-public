@@ -2,9 +2,9 @@
 
 <h1>Listing Events</h1>
 
-<%= select_tag "hostSelection", options_from_collection_for_select(Host.all, "id", "name"),  { :include_blank => "All" } %>
+<%= select_tag "hostSelection", options_from_collection_for_select(Host.all, "id", "name", :selected => params[:host]), { :include_blank => "All"} %>
 
-<%= render 'events/partials/event_list' %>
+<%=render partial: 'events/partials/event_list' %>
 
 <br>
 

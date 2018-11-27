@@ -1,0 +1,9 @@
+<div>
+  <h2>
+    Import events:
+  </h2>
+  <%= form_tag(import_events_path, method: "post", multipart: "true") do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+</div>

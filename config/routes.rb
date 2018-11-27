@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   root 'events#index'
-  resources :events
+  resources :events do
+    collection do
+      post 'import' => 'events#import'
+    end
+  end
+
+
+  get '/host/:host/events', to: 'events#get_events_by_host'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

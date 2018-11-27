@@ -1,0 +1,19 @@
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        onHostChange();
+    });
+
+    function onHostChange () {
+        $('#hostSelection').on("change", function() {
+            let value = $(this).val();
+
+            if(value != "") {
+                window.location = "/host/" + value + "/events";
+            }
+            else {
+                window.location = "/";
+            }
+        });
+    }
+
+</script>

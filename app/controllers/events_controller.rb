@@ -7,6 +7,11 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  # GET /host/:host/events
+  def get_events_by_host
+    @events = params[:host].blank? ? Event.all : Event.where(host_id: params[:host])
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
@@ -59,6 +64,12 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  # POST /import/:file
+  def import
+    Event.import(params[:file])
+    redirect_to events_url, notice: "Data imported successfully."
   end
 
   private
