@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6132d5e-d653-4a4a-aeac-e3031e30daa3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/csv_filereader_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/fixtures/csv/events.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/host.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/host_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/host_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/events_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/events_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -33,11 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/csv_filereader_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
               <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -88,6 +91,7 @@
         <option value="$PROJECT_DIR$/spec/models/host_spec.rb" />
         <option value="$PROJECT_DIR$/spec/requests/events_spec.rb" />
         <option value="$PROJECT_DIR$/spec/csv_filereader_spec.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -290,16 +294,15 @@
       <workItem from="1543292043504" duration="7131000" />
       <workItem from="1543336326075" duration="1016000" />
       <workItem from="1543338038272" duration="2789000" />
-      <workItem from="1543366673866" duration="7766000" />
+      <workItem from="1543366673866" duration="8028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63110000" />
+    <option name="totallyTimeSpent" value="63372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="979" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22161172" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -497,6 +500,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
