@@ -1,10 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe "Events", type: :request do
+
+  #
+  # Modified to accommodate host name in view.
   describe "GET /events" do
     before do
-      Event.create(name: "Birthday")
-      Event.create(name: "Party")
+      Host.create(name: "Unknown")
+      Event.create(name: "Birthday", host_id: 1)
+      Event.create(name: "Party", host_id: 1)
     end
 
     it "returns a list of events" do
@@ -13,6 +17,7 @@ RSpec.describe "Events", type: :request do
       expect(response).to render_template("events/index")
       expect(response.body).to include("Birthday")
       expect(response.body).to include("Party")
+      expect(response.body).to include("Unknown")
     end
   end
 
@@ -75,5 +80,21 @@ RSpec.describe "Events", type: :request do
       expect(response).to render_template("events/show")
       expect(response.body).to include("Foo")
     end
+  end
+
+  #
+  # Events by host
+  describe "/host/:id/events", type: :routing do
+      it "routes /host/:id/events to events#get_events_by_host" do
+        expect(:get => "/host/1/events").to route_to(
+        :controller => "events",
+        :action => "get_events_by_host",
+        :host => "1"
+      )
+      end
+
+      it "does not expose a host" do
+        expect(:get => "/host").not_to be_routable
+      end
   end
 end
